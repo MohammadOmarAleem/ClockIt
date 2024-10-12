@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ClockIt</string>
+    <string name="tag">Your Tagline Here</string>
+    <string name="e_mail">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="swipe_left_for_register">Swipe left to register</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
 </resources>
