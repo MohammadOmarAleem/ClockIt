@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClockIt"
         tools:targetApi="31">
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ForgotPassActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
