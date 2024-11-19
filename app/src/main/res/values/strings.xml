@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">ClockIt</string>
+    <string name="tag">Your Tagline Here</string>
+    <string name="e_mail">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="swipe_left_for_register">Swipe left to register</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <string name="register">Register</string>
+    <string name="your_name">Your Name</string>
+    <string name="re_type_password">Re-type Password</string>
+    <string name="swipe_right_for_login">Swipe Right for Login</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="placeholder_classes">
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+    </string-array>
+    <string-array name="departments_array">
+        <item>ELEC</item>
+        <item>COEN</item>
+        <item>ENGR</item>
+        <item>COMP</item>
+        <item>ACTU</item>
+        <item>BIOL</item>
+        <item>CHEM</item>
+        <item>COMM</item>
+        <item>ECON</item>
+        <item>ENGL</item>
+        <item>FINA</item>
+        <item>HIST</item>
+        <item>INDU</item>
+        <item>MATH</item>
+        <item>MECH</item>
+        <item>PHYS</item>
+        <item>POLI</item>
+        <item>PSYC</item>
+        <item>SOCI</item>
+        <item>STAT</item>
+    </string-array>
+
+    <string-array name="support_options">
+        <item>General Inquiry</item>
+        <item>Technical Support</item>
+        <item>Account Issues</item>
+        <item>Billing</item>
+        <item>Feedback</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="recipients_options">
+        <item>All Participants</item>
+        <item>COEN 390</item>
+    </string-array>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Toolbar with Back Button -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_new_announcement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="New Announcement"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title Input Field -->
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textSize="16sp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_new_announcement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Recipients Dropdown (Spinner) -->
+    <Spinner
+        android:id="@+id/spinner_recipients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Message Input Field -->
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Message"
+        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/spinner_recipients"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_send_announcement"
+        android:layout_marginTop="16dp" />
+
+    <!-- Send Announcement Button -->
+    <Button
+        android:id="@+id/button_send_announcement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Announcement"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

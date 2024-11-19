@@ -1,0 +1,132 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Attend_log_History">
+
+    <!-- App Title (ClockIt) aligned to the top right -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/labrador_b_medium"
+        android:text="ClockIt."
+        android:textColor="#2D2D36"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Spinner to Select Class -->
+    <Spinner
+        android:id="@+id/classSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        android:spinnerMode="dropdown"
+        android:backgroundTint="@color/purple_500"
+        android:entries="@array/placeholder_classes" />
+
+    <!-- Date Filter Layout -->
+    <LinearLayout
+        android:id="@+id/dateFilterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classSpinner">
+
+        <!-- Date Input -->
+        <EditText
+            android:id="@+id/dateInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Date (dd/MM/yyyy)"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <!-- Filter Button -->
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Filter"
+            android:padding="8dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- ScrollView for Attendance Table -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateFilterLayout">
+
+        <!-- Table Layout for Attendance Log -->
+        <TableLayout
+            android:id="@+id/attendanceTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Table Header -->
+            <TableRow
+                android:background="#E0E0E0"
+                android:padding="7dp">
+
+                <TextView
+                    android:gravity="center|left"
+                    android:padding="8dp"
+                    android:text="Name"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center|left"
+                    android:padding="8dp"
+                    android:text="ID"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Check-In"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Check-Out"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
