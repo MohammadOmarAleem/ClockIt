@@ -62,11 +62,13 @@ As part of the **ClockIt** development team, I contributed to:
 
 ---
 
-## 💡 Technologies Used
+## 💡 Hardware Used
 
-- **ESP32 Microcontroller**: Cost-effective and energy-efficient hardware.
-- **NFC Technology**: Ensures fast and precise data capture.
-- **Admin Dashboard**: Intuitive interface for real-time attendance monitoring.
+- **ESP32 Microcontroller**: A high-performance microcontroller for efficient attendance tracking and data handling.
+- **MFRC522 NFC Module**: NFC technology for fast and reliable attendance capture.
+- **LCD Display**: Compact and clear display for real-time feedback on attendance.
+- **Enclosure**: Lightweight and portable 3D printed design, allowing seamless placement in classrooms or other environments.
+
 
 ---
 
