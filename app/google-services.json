@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "93459014515",
+    "firebase_url": "https://clockitw-default-rtdb.firebaseio.com",
+    "project_id": "clockitw",
+    "storage_bucket": "clockitw.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93459014515:android:bac6a21f622d12264edb06",
+        "android_client_info": {
+          "package_name": "com.example.clockit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPWFTFBOvJAm68h27m_2o6ASLTX2CrHnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

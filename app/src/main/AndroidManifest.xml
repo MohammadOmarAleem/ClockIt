@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.clockit">
+
+    <!-- Internet Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClockIt"
+        tools:targetApi="31">
+
+        <!-- Firebase Authentication Service -->
+        <meta-data
+            android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+            android:value="com.google.firebase.components.ComponentDiscoveryService"
+            tools:replace="android:value" />
+
+        <!-- SplashActivity as launcher activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <!-- Activities -->
+        <activity
+            android:name=".Attend_log_History"
+            android:parentActivityName=".AdminFragment" />
+        <activity android:name=".Attendance_log" />
+        <activity android:name=".AdminFragment" />
+        <activity android:name=".StudentDetailActivity" />
+        <activity android:name=".AddClassActivity" />
+        <activity android:name=".EditClassActivity" />
+
+
+
+
+    </application>
+</manifest>

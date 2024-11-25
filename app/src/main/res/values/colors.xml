@@ -1,0 +1,12 @@
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="black">#000000</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="gray">#BDBDBD</color>
+    <color name="lightGray">#D3D3D3</color>
+    <color name="teal_700">#00796B</color> <!-- Added this color -->
+    <color name="purple_500">#6200EE</color> <!-- Material Design default purple -->
+
+</resources>

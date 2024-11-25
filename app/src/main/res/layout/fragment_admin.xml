@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Toolbar with Menu Icon -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#2D2D36"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="Dashboard"
+                app:titleTextColor="@android:color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Welcome Message -->
+            <TextView
+                android:id="@+id/welcomeMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Professor!"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:textSize="24sp"
+                android:textColor="#2D2D36"
+                android:fontFamily="@font/gomme_sans_w04_extrabold" />
+
+            <!-- Date and Time -->
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/welcomeMessage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Date and Time"
+                android:textColor="#BDBDBD"
+                android:textSize="18sp"
+                android:fontFamily="@font/labrador_b_medium" />
+
+            <!-- Daily Overview Heading -->
+            <TextView
+                android:id="@+id/dailyOverviewHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/dateTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Daily Overview"
+                android:textSize="20sp"
+                android:textColor="#2D2D36"
+                android:fontFamily="@font/labrador_b_bold" />
+
+            <!-- Daily Overview Table -->
+            <TableLayout
+                android:id="@+id/dailyOverviewTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/dailyOverviewHeading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/table_outer_border">
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/totalStudentsText"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Total Students: "
+                        android:textSize="16sp"
+                        android:textColor="#2D2D36"
+                        android:gravity="center"
+                        android:fontFamily="@font/labrador_b_medium" />
+
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/classesTodayText"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Classes Today: "
+                        android:textSize="16sp"
+                        android:textColor="#2D2D36"
+                        android:gravity="center"
+                        android:fontFamily="@font/labrador_b_medium" />
+                </TableRow>
+            </TableLayout>
+
+            <!-- Class Schedule Heading -->
+            <TextView
+                android:id="@+id/classScheduleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/dailyOverviewTable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Class Schedule and Logs"
+                android:textSize="20sp"
+                android:textColor="#2D2D36"
+                android:fontFamily="@font/labrador_b_bold" />
+
+            <!-- Class Schedule Table -->
+            <TableLayout
+                android:id="@+id/classScheduleTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/classScheduleHeading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/table_outer_border">
+
+                <!-- Header Row -->
+                <TableRow android:background="#E0E0E0">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Start Time"
+                        android:textSize="16sp"
+                        android:textColor="#2D2D36"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="@font/labrador_b_medium" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="End Time"
+                        android:textSize="16sp"
+                        android:textColor="#2D2D36"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="@font/labrador_b_medium" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Course"
+                        android:textSize="16sp"
+                        android:textColor="#2D2D36"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="@font/labrador_b_medium" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Room"
+                        android:textSize="16sp"
+                        android:textColor="#2D2D36"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="@font/labrador_b_medium" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Attendance"
+                        android:textSize="16sp"
+                        android:textColor="#2D2D36"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="@font/labrador_b_medium" />
+                </TableRow>
+            </TableLayout>
+
+            <!-- Add Class Button -->
+            <Button
+                android:id="@+id/addClassButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/classScheduleTable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="#2D2D36"
+                android:text="Add Class"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Navigation Drawer View -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,204 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Attendance_log">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/labrador_b_medium"
+        android:text="ClockIt."
+        android:textColor="#2D2D36"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Course Name -->
+    <TextView
+        android:id="@+id/courseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/labrador_b_medium"
+        android:text="Course: Loading..."
+        android:textColor="#2D2D36"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+    <!-- Date and Time -->
+    <TextView
+        android:id="@+id/courseDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/labrador_b_medium"
+        android:text="Date and Time: Loading..."
+        android:textColor="#2D2D36"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseTitle" />
+
+    <!-- Attendance Log Title -->
+    <TextView
+        android:id="@+id/attendanceLogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/labrador_b_medium"
+        android:text="Attendance Log"
+        android:textColor="#2D2D36"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseDateTime" />
+
+    <!-- ScrollView for Attendance Table -->
+    <ScrollView
+        android:id="@+id/scrollViewAttendance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/absentTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendanceLogTitle">
+
+        <!-- Table Layout for Attendance Log -->
+        <TableLayout
+            android:id="@+id/attendanceTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Table Header -->
+            <TableRow
+                android:background="#E0E0E0"
+                android:padding="7dp">
+
+                <TextView
+                    android:gravity="center|left"
+                    android:padding="8dp"
+                    android:text="Name"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center|left"
+                    android:padding="8dp"
+                    android:text="ID"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="TimeIn"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="TimeOut"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <!-- Absent Students Title -->
+    <TextView
+        android:id="@+id/absentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/labrador_b_medium"
+        android:text="Absent Students"
+        android:textColor="#2D2D36"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewAttendance" />
+
+    <!-- ScrollView for Absent Table -->
+    <ScrollView
+        android:id="@+id/scrollViewAbsent"
+        android:layout_width="362dp"
+        android:layout_height="346dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/absentTitle">
+
+        <!-- Table Layout for Absent Students -->
+        <TableLayout
+            android:id="@+id/absentTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Table Header -->
+            <TableRow
+                android:background="#E0E0E0"
+                android:padding="7dp">
+
+                <TextView
+                    android:layout_width="159dp"
+                    android:gravity="center|left"
+                    android:padding="8dp"
+                    android:text="Name"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="173dp"
+                    android:gravity="center|left"
+                    android:padding="8dp"
+                    android:text="ID"
+                    android:textColor="#2D2D36"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Back"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
